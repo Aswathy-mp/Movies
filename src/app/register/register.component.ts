@@ -1,0 +1,26 @@
+import { Component, OnInit } from '@angular/core';
+import { FormControl,FormBuilder, Validators} from '@angular/forms';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+
+  constructor(public fb:FormBuilder) { }
+  registerform=this.fb.group({
+    fullname:new FormControl('',[Validators.required,Validators.pattern(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/)]),
+    email:new FormControl('',[Validators.required,Validators.pattern(/^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}/)]),
+    contact:new FormControl('',[Validators.required,Validators.pattern(/^[0-9]+$/)]),
+    address:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required,Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/)])
+  })
+  ngOnInit(): void {
+  }
+  register(){
+    let registerdata=this.registerform.value;
+    console.log(registerdata)
+    localStorage.setItem('registerdata',JSON.stringify(registerdata))
+  }
+}

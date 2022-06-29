@@ -1,0 +1,29 @@
+input{
+    border-radius: 20px;
+}
+button{
+    background-color: #b48484;
+    border-radius: 20px;
+    /* background-color: ; */
+    border:none;
+}
+a{
+    text-decoration: none;
+    color: white; 
+}
+.anchor{
+    /* border: 1px solid #b48484; */
+    border-radius: 10px;
+    background-color: #b484847b;
+}
+.ftco-section{
+    background-image: url('/assets/images/background.webp');
+    background-size: cover;
+    height: 92vh;
+}
+/* .anchor:hover{
+    color: #b48484;
+} */
+.btn{
+    width: 100%;
+}
