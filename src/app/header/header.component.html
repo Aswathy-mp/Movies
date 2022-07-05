@@ -2,11 +2,12 @@
     <div class="container-fluid">
       <a class="navbar-brand">Cineflicks</a>
       <form class="d-flex">
-        <a routerLink="home" class="px-2">Home</a>
-        <a routerLink="single" class="px-2">Single</a>
-        <a routerLink="profile" class="px-2">View Profile</a>
-        <a routerLink="login" class="px-2">Login</a>
-        <a routerLink="register"  class="px-5">Register</a>
+        <a routerLink="home" class="px-2" *ngIf="auth.loggedIn()">Home</a>
+        <!-- <a routerLink="single" class="px-2">Single</a> -->
+        <a routerLink="profile" class="px-2" *ngIf="auth.loggedIn()">View Profile</a>
+        <a routerLink="login" class="px-2" *ngIf="auth.loggedIn()" (click)="logout()">Log Out</a>
+        <a routerLink="login" class="px-2" *ngIf="!auth.loggedIn()">Login</a>
+        <a routerLink="register"  class="px-2" *ngIf="!auth.loggedIn()">Register</a>
 
       </form>
     </div>
