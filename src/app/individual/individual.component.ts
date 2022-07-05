@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute,ParamMap } from '@angular/router';
+import { MovieModel } from '../movie.model';
 
 @Component({
   selector: 'app-individual',
@@ -9,6 +10,7 @@ import { ActivatedRoute,ParamMap } from '@angular/router';
 })
 export class IndividualComponent implements OnInit {
     id:any='';
+    // movie:MovieModel[]=[]
     movie:any
   constructor(public http:HttpClient,public route:ActivatedRoute) {
     this.movie=[]
@@ -21,7 +23,8 @@ export class IndividualComponent implements OnInit {
     // this.id='tt4154756'
      this.http.get(`http://www.omdbapi.com/?i=${this.id.imdbID}&apikey=d3072a68`).subscribe((data:any)=>{
       console.log(data)
-      this.movie=data;
+      // this.movie=JSON.parse(JSON.stringify(data));
+      this.movie=data
      });
   }
 
