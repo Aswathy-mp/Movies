@@ -1,14 +1,21 @@
-<div>
-    <div class="d-flex justify-content-center py-5"><h1>The Shawshank Redemption</h1></div>
     <div class="container">
-        <div class="row">
-            <div class="column1" style="background-color:#aaa;">
-              <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="">
-            </div>
-            <div class="column2" style="background-color:#bbb;">
-              <h2>Column 2</h2>
-              <p>Some text..</p>
-            </div>
-          </div>
+      <div class="row" *ngFor="let i of movie" >
+        <div class="col-sm-3 col-md-6 d-flex justify-content-center py-5">
+            <img [src]="" style="width:100%; height: auto;" alt="">
+        </div>
+        <div class="col-sm-9 col-md-6" style="padding-top:10% ;">
+            <dl class="row">
+              <dt class="col-sm-6"><h3>{{i.Title}}</h3></dt>
+              <dd class="col-sm-6"></dd>
+              <dt class="col-sm-6">E-mail</dt>
+              <dd class="col-sm-6"></dd>
+              <dt class="col-sm-6">Contact</dt>
+              <dd class="col-sm-6"></dd>
+              <dt class="col-sm-6">Address</dt>
+              <dd class="col-sm-6"></dd>
+            </dl>
+           
+        </div>
     </div>
-</div>
+    </div>
+    <!-- *ngFor="let i of movie" -->

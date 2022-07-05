@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     this.http.get(`${url}`).subscribe((data)=>{
       console.log(data);
       this.movies=data
-      console.log(this.movies)
+      // console.log(this.movies)
     })
     
   } 

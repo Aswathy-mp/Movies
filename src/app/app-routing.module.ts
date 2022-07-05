@@ -11,7 +11,7 @@ import { AuthGuard } from './auth.guard';
 const routes: Routes = [{path:'login',component:LoginComponent},
                         {path:'register',component:RegisterComponent},
                         {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
-                        {path:'home/single',component:IndividualComponent,canActivate:[AuthGuard]},
+                        {path:'single/:imdbID',component:IndividualComponent,canActivate:[AuthGuard]},
                         {path:'profile',component:ProfileComponent,canActivate:[AuthGuard]},
                         {path:'',component:RegisterComponent}];
 

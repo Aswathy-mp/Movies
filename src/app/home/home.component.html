@@ -16,11 +16,12 @@
         <div class="row">
             <div class="column " *ngFor="let i of movies['Search']">
               <div class="card">
-                <img [src]="i['Poster']" alt="" class="card-img-top">
-                <h3>{{i['Title']}}</h3>
-                <p>{{i['Year']}}</p>
-                <p >{{i['imdbID']}}</p>
-                <a routerLink="single" class="stretched-link"></a>
+                <img [src]="i.Poster" alt="" class="card-img-top">
+                <h3>{{i.Title}}</h3>
+                <h5>{{i.imdbID}}</h5>
+                <p>{{i.Year}}</p>
+                <p >{{i.imdbID}}</p>
+                <a [routerLink]="['/single',i.imdbID]" class="stretched-link"></a>
               </div>
              
             </div>
