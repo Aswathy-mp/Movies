@@ -14,10 +14,10 @@ a{
 .anchor{
     /* border: 1px solid #b48484; */
     border-radius: 10px;
-    background-color: #b484847b;
+    background-color: #b48484;
 }
 .ftco-section{
-    background-image: url('/assets/images/background.webp');
+    background-image: url('/assets/images/bg.jpg');
     background-size: cover;
     height: 92vh;
 }
@@ -26,4 +26,7 @@ a{
 } */
 .btn{
     width: 100%;
+}
+.heading-section{
+    color: white;
 }

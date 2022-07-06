@@ -8,7 +8,7 @@
         </form>
        </div>
     <div>
-        <div class="d-flex justify-content-center"><p class="display-6 py-5"> Unlimited Movies and web series</p></div>
+        <div class="d-flex justify-content-center"><p class="display-6 py-4"> Unlimited Movies and web series</p></div>
         <!-- <p>Value: {{ search.value }}</p> -->
 </div>
 
@@ -18,9 +18,7 @@
               <div class="card">
                 <img [src]="i.Poster" alt="" class="card-img-top">
                 <h3>{{i.Title}}</h3>
-                <h5>{{i.imdbID}}</h5>
                 <p>{{i.Year}}</p>
-                <p >{{i.imdbID}}</p>
                 <a [routerLink]="['/single',i.imdbID]" class="stretched-link"></a>
               </div>
              

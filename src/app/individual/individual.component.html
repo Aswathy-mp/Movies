@@ -1,21 +1,93 @@
-    <div class="container">
-      <div class="row" *ngFor="let i of movie" >
-        <div class="col-sm-3 col-md-6 d-flex justify-content-center py-5">
-            <img [src]="" style="width:100%; height: auto;" alt="">
+    <div class="bg-light">
+    <div class="container ">
+      <div class="d-flex justify-content-center" style="padding-top: 5%;"><h1>{{Title}}</h1></div>
+      <div class="row"  >
+        <div class="col-sm-3 col-md-4 col-lg-6 d-flex justify-content-center py-5">
+            <img [src]="Poster" style="width:80%; height: auto;" alt="">
         </div>
-        <div class="col-sm-9 col-md-6" style="padding-top:10% ;">
-            <dl class="row">
-              <dt class="col-sm-6"><h3>{{i.Title}}</h3></dt>
-              <dd class="col-sm-6"></dd>
-              <dt class="col-sm-6">E-mail</dt>
-              <dd class="col-sm-6"></dd>
-              <dt class="col-sm-6">Contact</dt>
-              <dd class="col-sm-6"></dd>
-              <dt class="col-sm-6">Address</dt>
-              <dd class="col-sm-6"></dd>
-            </dl>
-           
+        <div class="col-sm-9 col-md-8 col-lg-6" style="padding-top:5% ;" >
+             <p class="lead">{{Plot}}</p>
+             <hr>
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Director</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Director}}
+                </div>
+              </div>
+
+              <hr>
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Writers</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Writer}}
+                </div>
+              </div>
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Starring</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Actors}}
+                </div>
+              </div> 
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Awards</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Awards}}
+                </div>
+              </div> 
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Genre</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Genre}}
+                </div>
+              </div> 
+
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>Box Office Collection</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{BoxOffice}}
+                </div>
+              </div> 
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>MetaScore</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{MetaScore}}
+                </div>
+              </div> 
+
+              <hr>  
+              <div class="row">
+                <div class="col-sm-3 col-md-3">
+                  <h6>IMDB Rating</h6>
+                </div>
+                <div class="col-sm-9 col-md-9">
+                  {{Rating}}
+                </div>
+              </div> 
         </div>
     </div>
     </div>
-    <!-- *ngFor="let i of movie" -->
+</div>    

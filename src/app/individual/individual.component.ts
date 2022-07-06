@@ -12,8 +12,18 @@ export class IndividualComponent implements OnInit {
     id:any='';
     // movie:MovieModel[]=[]
     movie:any
+    Title:any=''
+    Poster:any=''
+    Actors:any=''
+    Director:any=''
+    Plot:any=''
+    Writer:any=''
+    Awards:any=''
+    BoxOffice:any=''
+    Rating:any=''
+    Genre:any=''
+    MetaScore:any=''
   constructor(public http:HttpClient,public route:ActivatedRoute) {
-    this.movie=[]
    }
   
   ngOnInit(): void {
@@ -25,6 +35,17 @@ export class IndividualComponent implements OnInit {
       console.log(data)
       // this.movie=JSON.parse(JSON.stringify(data));
       this.movie=data
+      this.Poster=this.movie.Poster
+      this.Title=this.movie.Title
+      this.Actors=this.movie.Actors
+      this.Plot=this.movie.Plot
+      this.Director=this.movie.Director
+      this.Writer=this.movie.Writer
+      this.Awards=this.movie.Awards
+      this.BoxOffice=this.movie.BoxOffice
+      this.Rating=this.movie.imdbRating
+      this.Genre=this.movie.Genre
+      this.MetaScore=this.movie.Metascore
      });
   }
 
